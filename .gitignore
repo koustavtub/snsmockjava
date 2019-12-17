@@ -1,0 +1,10 @@
+/.idea
+/bin
+/project/project
+/project/target
+/target
+/tmp
+/vendor
+/db.json
+/Gemfile.lock
+/composer.lock
