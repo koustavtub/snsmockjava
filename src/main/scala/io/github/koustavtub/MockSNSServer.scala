@@ -44,11 +44,11 @@ object MockSNSServer extends ToStrict {
     }
 
   def start(): Int = {
-    start(Option.empty);
+    start(findRandomOpenPortOnAllLocalInterfaces);
   }
 
-  def start(portNumber: Option[Int]): Int = {
-    val serverPort = portNumber.getOrElse(findRandomOpenPortOnAllLocalInterfaces)
+  def start(portNumber: Int): Int = {
+    val serverPort = portNumber
     Http().bindAndHandle(
       handler = logRequestResult("akka-http-sns")(routes),
       interface = Properties.envOrElse("HTTP_INTERFACE", config.getString("http.interface")),
