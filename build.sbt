@@ -5,7 +5,12 @@ scmInfo := Some(ScmInfo(url("https://github.com/koustavtub/snsmockjava"), "git@g
 licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0"))
 publishMavenStyle := true
 
-
+/*credentials += Credentials(
+  "Sonatype Nexus Repository Manager",
+  "oss.sonatype.org",
+  "koustavtub",
+  "**password_here**"
+)*/
 
 
 
@@ -18,7 +23,7 @@ publishTo := Some(
 )
 
 
-version := "0.4.2"
+version := "0.4.1"
 
 scalaVersion := "2.12.4"
 
