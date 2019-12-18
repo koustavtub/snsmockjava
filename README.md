@@ -35,8 +35,10 @@ Note: Environment variables can be used to specify URIs via `{{env:ENV_NAME}}`.
 
 Example: `aws-sqs://{{env:QUEUE_NAME}}?amazonSQSEndpoint={{env:SQS_ENDPOINT}}&...`
 
+## Checksum
+Use pgp key from [![PGP 0x0FB37A4F](https://peegeepee.com/badge/orange/0FB37A4F.svg)](https://d.peegeepee.com/BAA5613759AC3A533E1BF6F64A299E6E0FB37A4F.asc)
 
-#Credits
+## Credits
 
 All credits to: [https://github.com/s12v/sns](https://github.com/s12v/sns)
 This project is just for easier use on Java by using an included wrapper.
