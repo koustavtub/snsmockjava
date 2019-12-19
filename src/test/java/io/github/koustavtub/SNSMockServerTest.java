@@ -23,9 +23,7 @@ public class SNSMockServerTest {
 
             HttpGet request = new HttpGet("http://localhost:" + serverPort + "/health");
 
-            CloseableHttpResponse response = httpClient.execute(request);
-
-            try {
+            try (CloseableHttpResponse response = httpClient.execute(request)) {
                 LOGGER.info(response.getStatusLine().toString());        // HTTP/1.1 200 OK
 
                 HttpEntity entity = response.getEntity();
@@ -33,8 +31,6 @@ public class SNSMockServerTest {
                     LOGGER.info("Entity as String: {}", EntityUtils.toString(entity));
                 }
 
-            } finally {
-                response.close();
             }
         }
 
